@@ -1,14 +1,13 @@
 import React from 'react'
-import NavBar from '../NavBar/NavBar'
-import { Outlet } from 'react-router-dom'
 import Banner from '../Banner/Banner'
+import JobCategory from '../JobCategory/JobCategory'
+
 
 const Home = () => {
   return (
     <div>
-        <NavBar />
         <Banner />
-        <Outlet />
+        <JobCategory />
       
     </div>
   )

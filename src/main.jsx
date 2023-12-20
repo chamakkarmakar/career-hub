@@ -8,12 +8,21 @@ import {
 import './index.css'
 import Home from './components/Home/Home.jsx';
 import Banner from './components/Banner/Banner.jsx';
+import JobCategory from './components/JobCategory/JobCategory.jsx';
+import Root from './components/Root/Root.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />
-    
+    element: <Root />,
+    children : [
+      {
+        path : "/",
+        element : <Home />
+        
+      }
+      
+    ]
   },
 ]);
 
