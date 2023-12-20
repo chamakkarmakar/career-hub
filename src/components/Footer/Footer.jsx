@@ -4,9 +4,9 @@ import { IoLogoTwitter } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa";
 const Footer = () => {
     return (
-        <div className='bg-purple-950 mt-20 pt-20 px-28 text-gray-300'>
-            <div className='flex justify-between'>
-                <div className='w-1/4'>
+        <div className='bg-purple-950 mt-20 pt-20 md:px-28 px-14 text-gray-300'>
+            <div className='flex md:flex-row flex-col md:justify-between justify-center items-center'>
+                <div className='md:w-1/4 w-auto'>
                     <h2 className='font-bold text-3xl text-white'>Jobly</h2>
                     <p>There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
 
@@ -16,7 +16,7 @@ const Footer = () => {
                         <FaInstagram className='w-7 h-7 text-white' />
                     </div>
                 </div>
-                <div className='w-3/5 grid grid-cols-4 gap-x-5'>
+                <div className='md:w-3/5 w-auto grid md:grid-cols-4 grid-cols-2 gap-10 md:mt-0 mt-5'>
                     <div>
                         <h3 className='font-semibold text-xl mb-2 text-white'>Company</h3>
                         <ul>
