@@ -29,7 +29,7 @@ const NavBar = () => {
     ];
     const [toggleMenu, setToggleMenu] = useState(false);
     return (
-        <nav className="bg-purple-950 text-white py-3 flex justify-between md:items-center">
+        <nav className="sticky top-0 bg-purple-950 text-white py-3 flex justify-between md:items-center">
             <header className='ms-10'>
                 <h1 className='text-3xl  font-extrabold'>JOBLY</h1>
             </header>

@@ -9,8 +9,8 @@ const Job = ({ job }) => {
            <h2 className='text-lg font-bold'>{job.job_title}</h2>
             <p className='text-gray-600 text-lg font-semibold'>{job.company_name}</p>
             <div className='my-3'>
-                <span className='me-5 text-blue-600 rounded font-semibold border border-blue-600 py-1 px-3'>Onsite</span>
-                <span className='me-5 text-blue-600 rounded font-semibold border border-blue-600 py-1 px-3'>Fulltime</span>
+                <span className='me-5 text-purple-600 rounded font-semibold border border-purple-600 py-1 px-3'>Onsite</span>
+                <span className='me-5 text-purple-600 rounded font-semibold border border-purple-600 py-1 px-3'>Fulltime</span>
             </div>
             <div>
                 <img src={location} alt="location" className='inline w-5 h-5 me-2' />

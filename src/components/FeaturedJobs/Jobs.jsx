@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Job from './Job';
+import { BiLoader } from "react-icons/bi";
 
 const Jobs = () => {
     const [jobs, setJobs] = useState([]);
@@ -23,6 +24,11 @@ const Jobs = () => {
                     ></Job>)
                 }
             </div>
+           <div className="flex justify-center items-center">
+           <button className='py-2 mt-3 px-10 border-2 rounded  border-purple-950 bg-purple-900 text-white hover:text-purple-950 hover:bg-transparent cursor-pointer font-bold'>
+            Load More <BiLoader className='inline'/>
+            </button>
+           </div>
         </div>
     )
 }
