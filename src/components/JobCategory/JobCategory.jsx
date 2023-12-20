@@ -13,6 +13,7 @@ const JobCategory = () => {
             <div className="grid md:grid-cols-4 grid-cols-2 justify-items-center gap-5">
                 {
                     categories.map(category => <Category
+                    key={category.id}
                         category={category}
                     ></Category>)
                 }
