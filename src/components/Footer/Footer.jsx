@@ -4,7 +4,7 @@ import { IoLogoTwitter } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa";
 const Footer = () => {
     return (
-        <div className='bg-purple-950 mt-20 pt-20 md:px-28 px-14 text-gray-300'>
+        <div className='bg-purple-950 pt-20 md:px-28 px-14 text-gray-300'>
             <div className='flex md:flex-row flex-col md:justify-between justify-center items-center'>
                 <div className='md:w-1/4 w-auto'>
                     <h2 className='font-bold text-3xl text-white'>Jobly</h2>

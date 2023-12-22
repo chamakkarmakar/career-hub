@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import jobCategoryBg from "../../assets/images/job-category-bg.jpg"
+import jobCategoryBg from "../../assets/images/job-category-bg-2.jpg"
 import Category from './Category';
 const JobCategory = () => {
     const [categories, setCategories] = useState([]);
@@ -9,11 +9,11 @@ const JobCategory = () => {
             .then(data => setCategories(data))
     }, [])
     return (
-        <div className='py-20 px-auto bg-no-repeat bg-center bg-cover' style={{ backgroundImage: `url(${jobCategoryBg})` }}>
+        <div className='py-20 px-10 bg-no-repeat bg-center bg-cover' style={{ backgroundImage: `url(${jobCategoryBg})` }}>
             <div className="grid md:grid-cols-4 grid-cols-2 justify-items-center gap-5">
                 {
                     categories.map(category => <Category
-                    key={category.id}
+                        key={category.id}
                         category={category}
                     ></Category>)
                 }
