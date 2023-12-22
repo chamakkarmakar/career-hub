@@ -15,19 +15,21 @@ const Banner = () => {
 
           <input type="search" name="" placeholder='Enter Keyword' className='py-3 px-5 border-none w-full rounded italic' />
           <select name="Job Type" placeholder='Job Type' className='py-3 px-5 border-none rounded w-full italic'>
+            <option value="" disabled>Job Type</option>
             <option value="Banking">Banking</option>
             <option value="IT">IT</option>
             <option value="NGO">NGO</option>
             <option value="Telecommunication">Telecommunication</option>
           </select>
           <select name="city" placeholder='City' className='py-3 px-5 border-none rounded w-full italic'>
+            <option value="" disabled>City</option>
             <option value="Dhaka">Dhaka</option>
             <option value="Chattogram">Chattogram</option>
             <option value="Cumilla">Cumilla</option>
             <option value="Sylet">Sylet</option>
             <option value="Rajshahi">Rajshahi</option>
           </select>
-          <input type="submit" value="Search Job" className='py-3 px-5 border-2 rounded w-full border-purple-950 bg-purple-900 text-white hover:text-purple-950 hover:bg-transparent cursor-pointer font-bold ' />
+          <input type="submit" value="Search Job" className='py-3 px-5 border-2 rounded w-full border-purple-950 bg-purple-900 text-white hover:text-purple-950 hover:bg-transparent cursor-pointer font-bold' />
         </form>
       </div>
 
