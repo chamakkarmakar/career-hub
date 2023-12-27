@@ -1,16 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import jobCategoryBg from "../../assets/images/job-category-bg-2.jpg"
 import { useLoaderData, useParams } from 'react-router-dom'
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import { FaLocationDot } from "react-icons/fa6";
 import { SlCalender } from "react-icons/sl";
+import { getStoredJobApplication, saveJobApplication } from '../../Utility/localStorage';
+import Toast from '../Toast/Toast';
 
 const JobDetails = () => {
-    const jobs = useLoaderData();
+    const jobsLoad = useLoaderData();
+    const appliedJobs = getStoredJobApplication();
     const { id } = useParams();
 
-    const job = jobs.find(job => job.id === parseInt(id))
-    console.log(job);
+    const job = jobsLoad.find(job => job.id === parseInt(id));
+    const [showToast, setShowToast] = useState(false);
+    const handleJobApply = id => {
+        if (appliedJobs.includes(id)) {
+            setShowToast(!showToast)
+            console.log(showToast);
+        } else {
+            saveJobApplication(id);
+        }
+        setTimeout(() => {
+            setShowToast(false);
+          }, 3000);
+    }
     return (
         <div className='mb-10'>
             <div className='bg-no-repeat bg-cover py-12 px-10 ' style={{ backgroundImage: `url("https://img.freepik.com/premium-photo/girl-write-open-white-book-accounting-minimal-clean-light-blue-desk-with-laptop-accessories-copy-space-flat-lay-top-view-mock-up_315337-7591.jpg?size=626&ext=jpg&ga=GA1.1.712245223.1703052857&semt=ais")` }}>
@@ -36,23 +50,24 @@ const JobDetails = () => {
                     <p className='mb-10'><span className='font-bold'>Experiences:</span> {job.experiences}</p>
                 </div>
                 <div className='bg-purple-100 p-5 md:w-3/12 h-4/6'>
-                    <h3 className='text-lg font-bold text-center'>Job Details</h3>
+                    <h3 className='text-lg font-bold text-center text-purple-950'>Job Details</h3>
                     <hr />
                     <div className='my-5'>
                         <h3><span className='font-bold'>Job Title:</span> {job.job_title} </h3>
                         <h5><span className='font-bold'>Salary:</span> {job.salary} </h5>
                         <p><span className='font-bold'>Job Type:</span> {job.job_type}, {job.remote_or_onsite} </p>
                     </div>
-                    <h3 className='text-lg font-bold text-center'>Contact Information</h3>
+                    <h3 className='text-lg font-bold text-center text-purple-950'>Contact Information</h3>
                     <hr />
                     <div className="my-5">
                         <p><span className='font-bold'>Phone:</span> {job.contact_information.phone} </p>
                         <p><span className='font-bold'>Email:</span> {job.contact_information.email} </p>
                         <p><span className='font-bold'>Address:</span> {job.contact_information.address} </p>
                     </div>
-                    <button className='py-3 px-5 border-2 rounded w-full border-purple-950 bg-purple-900 text-white hover:text-purple-950 hover:bg-transparent cursor-pointer font-bold'>Apply Now</button>
+                    <button onClick={() => handleJobApply(job.id)} className='py-3 px-5 border-2 rounded w-full border-purple-950 bg-purple-900 text-white hover:text-purple-950 hover:bg-transparent cursor-pointer font-bold'>Apply Now</button>
                 </div>
             </div>
+            {showToast && <Toast message="You have already Applied this blog" />}
         </div>
     )
 }

@@ -10,8 +10,8 @@ const NavBar = () => {
             to: "/"
         },
         {
-            item: "About",
-            to: "/about"
+            item: "Applied Jobs",
+            to: "/applied"
         },
         {
             item: "Blog",
@@ -20,11 +20,8 @@ const NavBar = () => {
         {
             item: "Contact Us",
             to: "/contact"
-        },
-        {
-            item: "Login",
-            to: "/contact"
         }
+        
 
     ];
     const [toggleMenu, setToggleMenu] = useState(false);
