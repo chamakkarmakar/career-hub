@@ -4,12 +4,12 @@ import banner from '../../assets/images/banner.jpg'
 const Banner = () => {
 
   return (
-    <div className="w-full text-center h-full py-32 m-auto  bg-no-repeat bg-cover bg-center " style={{ backgroundImage: `url(${banner})` }}>
-      <div className=' my-5'>
+    <div className="w-full text-center h-full py-44 m-auto bg-no-repeat bg-cover bg-center " style={{ backgroundImage: `linear-gradient(to bottom, rgba(254, 217, 237, 0.52), rgba(231, 188, 222, 0.63)), url(${banner})` }}>
+      <div className='md:mx-0 mx-2'>
         <h1 className='md:text-7xl text-4xl text-red-600 font-bold'>Hiring Just Got Easy Now</h1>
-        <p className='md:text-xl font-bold text-gray-800 my-2 text-lg'>Join us and Search Thousands of Jobs.</p>
+        <p className='md:text-xl font-bold text-gray-800 my-2 text-lg'>Join us and Search Thousands of Jobs</p>
       </div>
-      <div className='md:mx-48 mx-10 p-10 mt-20' style={{background : 'rgba(255,255,255,0.6)'}}>
+      <div className='md:mx-48 mx-7 p-10 mt-20' style={{background : 'rgba(255,255,255,0.6)'}}>
 
         <form action="" className='flex md:flex-row flex-col md:justify-between justify-center items-center gap-5 '>
 

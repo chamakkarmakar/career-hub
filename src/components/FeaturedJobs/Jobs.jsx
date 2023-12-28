@@ -12,10 +12,10 @@ const Jobs = () => {
             .then(data => setJobs(data))
     }, [])
     return (
-        <div className='my-32 '>
+        <div id='jobs' className='my-32 '>
             <div className="text-center">
                 <h2 className='text-3xl font-semibold'>Featured Jobs</h2>
-                <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
+                <p className='md:mx-0 mx-3'>Explore thousands of job opportunities with all the information you need. Its your future</p>
             </div>
             <div className='my-10 grid md:grid-cols-2 grid-cols-1 justify-items-center gap-10'>
                 {

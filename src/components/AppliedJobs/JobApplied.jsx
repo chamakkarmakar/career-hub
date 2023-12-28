@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import money from '../../assets/icons/money.png'
-import location from '../../assets/icons/Location.png'
+import { IoLocationOutline } from "react-icons/io5";
+import { RiMoneyDollarCircleLine } from "react-icons/ri";
 
 const JobApplied = ({ job }) => {
 
@@ -14,14 +14,18 @@ const JobApplied = ({ job }) => {
                     <p className='text-gray-600 text-lg font-semibold'>{job.company_name}</p>
                     <div className='md:my-1 my-2'>
                         <span className='me-5 text-purple-600 rounded font-semibold border border-purple-600 py-1 px-3'>{job.remote_or_onsite}</span>
-                        <span className='me-5 text-purple-600 rounded font-semibold border border-purple-600 py-1 px-3'>{job.job_type}</span>
+                        <span className=' text-purple-600 rounded font-semibold border border-purple-600 py-1 px-3'>{job.job_type}</span>
                     </div>
-                    <div>
-                        <img src={location} alt="location" className='inline w-5 h-5 me-2' />
-                        <span className='me-10'>{job.location}</span>
-                        <img src={money} alt="money" className='inline w-5 h-5 me-2' />
+                    <div className='flex md:flex-row flex-col justify-between md:items-center'>
+                    <p className='md:mr-5'>
+                        <IoLocationOutline className='inline w-5 h-5 me-2 text-purple-900' />
+                        <span>{job.location}</span>
+                    </p>
+                    <p>
+                        <RiMoneyDollarCircleLine className='inline w-5 h-5 me-2 text-purple-900' />
                         <span>{job.salary}</span>
-                    </div>
+                    </p>
+                </div>
                 </div>
             </div>
             <Link to={`/job/${job.id}`} className='md:mt-0 mt-5'>

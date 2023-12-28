@@ -12,6 +12,7 @@ import JobCategory from './components/JobCategory/JobCategory.jsx';
 import Root from './components/Root/Root.jsx';
 import JobDetails from './components/JobDetails/JobDetails.jsx';
 import AppliedJobs from './components/AppliedJobs/AppliedJobs.jsx';
+import Jobs from './components/FeaturedJobs/Jobs.jsx';
 
 const router = createBrowserRouter([
   {

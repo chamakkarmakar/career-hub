@@ -9,8 +9,8 @@ const JobCategory = () => {
             .then(data => setCategories(data))
     }, [])
     return (
-        <div className='py-20 px-10 bg-no-repeat bg-center bg-cover' style={{ backgroundImage: `url(${jobCategoryBg})` }}>
-            <div className="grid md:grid-cols-4 grid-cols-2 justify-items-center gap-5">
+        <div className='py-20 md:px-10 px-2 bg-no-repeat bg-center bg-cover' style={{ backgroundImage: `url(${jobCategoryBg})` }}>
+            <div className="grid md:grid-cols-4 grid-cols-2 justify-items-center gap-5 ">
                 {
                     categories.map(category => <Category
                         key={category.id}

@@ -67,7 +67,7 @@ const JobDetails = () => {
                     <button onClick={() => handleJobApply(job.id)} className='py-3 px-5 border-2 rounded w-full border-purple-950 bg-purple-900 text-white hover:text-purple-950 hover:bg-transparent cursor-pointer font-bold'>Apply Now</button>
                 </div>
             </div>
-            {showToast && <Toast message="You have already Applied this blog" />}
+            {showToast && <Toast message="You have already Applied this job" />}
         </div>
     )
 }
