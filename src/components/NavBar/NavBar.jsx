@@ -13,7 +13,7 @@ const NavBar = () => {
         },
         {
             item: "Applied Jobs",
-            to: "/applied"
+            to: "applied"
         },
         {
             item: "Blog",

@@ -6,6 +6,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { SlCalender } from "react-icons/sl";
 import { getStoredJobApplication, saveJobApplication } from '../../Utility/localStorage';
 import Toast from '../Toast/Toast';
+import Modal from '../Modal/Modal';
 
 const JobDetails = () => {
     const jobsLoad = useLoaderData();
@@ -14,12 +15,13 @@ const JobDetails = () => {
 
     const job = jobsLoad.find(job => job.id === parseInt(id));
     const [showToast, setShowToast] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+
     const handleJobApply = id => {
         if (appliedJobs.includes(id)) {
             setShowToast(!showToast)
-            console.log(showToast);
         } else {
-            saveJobApplication(id);
+            setShowModal(true)
         }
         setTimeout(() => {
             setShowToast(false);
@@ -30,7 +32,7 @@ const JobDetails = () => {
             <div className='bg-no-repeat bg-cover py-12 px-10 ' style={{ backgroundImage: `url("https://img.freepik.com/premium-photo/girl-write-open-white-book-accounting-minimal-clean-light-blue-desk-with-laptop-accessories-copy-space-flat-lay-top-view-mock-up_315337-7591.jpg?size=626&ext=jpg&ga=GA1.1.712245223.1703052857&semt=ais")` }}>
 
                 <div className='flex md:flex-row flex-col md:justify-around justify-center md:items-start items-center md:w-1/2'>
-                    <img src={job.logo} alt={job.company_name} className='h-32 mb-5' />
+                    <img src={job.logo} alt={job.company_name} className='h-32 mb-5 mr-10' />
                     <div>
                         <h2 className='text-purple-900 mb-5 font-bold text-3xl'>{job.job_title}</h2>
                         <div className='flex md:flex-row flex-col justify-between items-center mb-3'>
@@ -68,6 +70,9 @@ const JobDetails = () => {
                 </div>
             </div>
             {showToast && <Toast message="You have already Applied this job" />}
+            {showModal && <Modal 
+            showModal = {showModal} setShowModal = {setShowModal} id={job.id}
+            />}
         </div>
     )
 }

@@ -1,18 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
 import Home from './components/Home/Home.jsx';
-import Banner from './components/Banner/Banner.jsx';
-import JobCategory from './components/JobCategory/JobCategory.jsx';
 import Root from './components/Root/Root.jsx';
 import JobDetails from './components/JobDetails/JobDetails.jsx';
 import AppliedJobs from './components/AppliedJobs/AppliedJobs.jsx';
-import Jobs from './components/FeaturedJobs/Jobs.jsx';
+import SearchJobs from './components/FilteredSearchJobs/SearchJobs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,7 +21,12 @@ const router = createBrowserRouter([
         element : <Home />
       },
       {
-        path: "/job/:id",
+        path: "/search",
+        element: <SearchJobs />,
+        loader: ()=>fetch("/jobs.json")
+      },
+      {
+        path: "job/:id",
         element: <JobDetails />,
         loader: ()=>fetch("/jobs.json")
       },
