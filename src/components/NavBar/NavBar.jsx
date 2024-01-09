@@ -13,7 +13,7 @@ const NavBar = () => {
         },
         {
             item: "Applied Jobs",
-            to: "applied"
+            to: "/applied"
         },
         {
             item: "Blog",
@@ -21,7 +21,7 @@ const NavBar = () => {
         },
         {
             item: "Contact Us",
-            to: "/contact"
+            to: "/#contact"
         }
 
 
@@ -41,7 +41,7 @@ const NavBar = () => {
                     </div>
                     <div className={`md:static py-3 md:py-0 md:w-auto w-full flex md:flex-row flex-col items-center absolute right-0 bg-purple-950 delay-150 duration-500 ease-in-out ${toggleMenu ? 'top-14' : '-top-56'}`}>
                         {
-                            navItems.map((item, index) => <Link className='px-3 py-1 ms-8 uppercase delay-200 duration-300 font-semibold ease-in-out hover:underline hover:underline-offset-8 ' key={index} to={item.to}>{item.item}</Link>)
+                            navItems.map((item, index) => <HashLink className='px-3 py-1 ms-8 uppercase delay-200 duration-300 font-semibold ease-in-out hover:underline hover:underline-offset-8 ' key={index} to={item.to}>{item.item}</HashLink>)
                         }
                     </div>
                 </div>

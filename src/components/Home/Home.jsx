@@ -3,17 +3,17 @@ import Banner from '../Banner/Banner'
 import JobCategory from '../JobCategory/JobCategory'
 import Jobs from '../FeaturedJobs/Jobs'
 import Blogs from '../CareerBlogs/Blogs'
-import ScrollToTop from '../ScrollToTop/ScrollToTop'
+import Contact from '../Contact/Contact'
 
 
 const Home = () => {
   return (
     <div>
-        <Banner />
-        <JobCategory />
-        <Jobs />
-        <Blogs />
-    
+      <Banner />
+      <JobCategory />
+      <Jobs />
+      <Blogs />
+      <Contact />
     </div>
   )
 }
