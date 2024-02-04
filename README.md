@@ -7,6 +7,13 @@
 - It offers a user-friendly platform for job seekers to find and apply for jobs.
 - The platform aims to enhance the connection between job seekers and employers.
 
+## Technologies
+- React + Vite
+- React Tailwind
+- React Router Dom
+- React Hooks
+- React icons
+
 ## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
